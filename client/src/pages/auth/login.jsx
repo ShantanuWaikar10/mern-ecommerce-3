@@ -55,6 +55,11 @@ function AuthLogin() {
         setFormData={setFormData}
         onSubmit={onSubmit}
       />
+      <p>
+        <span className="font-bold">Note: </span>This is a demo account. You can
+        log in by using <span className="font-bold">Email: user@gmail.com</span>{" "}
+        and <span className="font-bold">Password: 123456</span>
+      </p>
     </div>
   );
 }
