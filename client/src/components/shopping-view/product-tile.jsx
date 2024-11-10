@@ -35,12 +35,12 @@ function ShoppingProductTile({
           ) : null}
         </div>
         <CardContent className="p-4">
-          <h2 className="text-sm md:text-lg lg:text-xl font-bold mb-2">{product?.title}</h2>
+          <h2 className="text-lg lg:text-xl font-bold mb-2">{product?.title}</h2>
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm md:text-lg text-muted-foreground">
+            <span className="text-base text-muted-foreground">
               {categoryOptionsMap[product?.category]}
             </span>
-            <span className="text-sm md:text-lg text-muted-foreground">
+            <span className="text-base text-muted-foreground">
               {brandOptionsMap[product?.brand]}
             </span>
           </div>
