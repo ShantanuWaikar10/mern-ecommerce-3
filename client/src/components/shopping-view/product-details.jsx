@@ -107,33 +107,33 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
 
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>
-      <DialogContent className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-8 sm:p-12 max-w-[90vw] sm:max-w-[80vw] lg:max-w-[70vw] max-h-[95vh]">
+      <DialogContent className="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-8 sm:p-12 max-w-[90vw] lg:max-w-[70vw] max-h-[95vh]">
         <div className="relative overflow-hidden rounded-lg">
           <img
             src={productDetails?.image}
             alt={productDetails?.title}
             width={600}
             height={600}
-            className="aspect-square w-full object-cover"
+            className="aspect-square w-full h-[25vh] lg:h-[50vh] object-cover"
           />
         </div>
         <div className="">
           <div>
-            <h1 className="text-2xl lg:text-3xl font-extrabold">{productDetails?.title}</h1>
-            <p className="text-muted-foreground text-xl lg:text-2xl mb-1 mt-1 lg:mb-5 lg:mt-4">
+            <h1 className="text-lg lg:text-3xl font-extrabold">{productDetails?.title}</h1>
+            <p className="text-muted-foreground text-base lg:text-2xl mb-1 mt-1 lg:mb-5 lg:mt-4">
               {productDetails?.description}
             </p>
           </div>
           <div className="flex items-center justify-between">
             <p
-              className={`text-3xl font-bold text-primary ${
+              className={`text-1xl lg:text-3xl font-bold text-primary ${
                 productDetails?.salePrice > 0 ? "line-through" : ""
               }`}
             >
               ${productDetails?.price}
             </p>
             {productDetails?.salePrice > 0 ? (
-              <p className="text-2xl font-bold text-muted-foreground">
+              <p className="text-1xl lg:text-3xl font-bold text-muted-foreground">
                 ${productDetails?.salePrice}
               </p>
             ) : null}
@@ -178,7 +178,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
             )}
           </div>
           <Separator />
-          <div className="max-h-[150px] lg:max-h-[300px] overflow-auto">
+          <div className="max-h-[150px] lg:max-h-[300px] overflow-auto px-2">
             <h2 className="text-xl font-bold mb-4">Reviews</h2>
             <div className="grid gap-6">
               {reviews && reviews.length > 0 ? (
