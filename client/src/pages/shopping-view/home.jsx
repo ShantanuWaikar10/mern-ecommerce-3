@@ -207,7 +207,7 @@ function ShoppingHome() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {productList && productList.length > 0
-              ? productList.map((productItem) => (
+              ? productList.slice(0,4).map((productItem) => (
                   <ShoppingProductTile
                     handleGetProductDetails={handleGetProductDetails}
                     product={productItem}
