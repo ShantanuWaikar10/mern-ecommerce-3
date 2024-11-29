@@ -85,7 +85,7 @@ function HeaderRightContent() {
   console.log(cartItems, "sangam");
 
   return (
-    <div className="flex lg:items-center lg:flex-row flex-row  gap-4">
+    <div className="flex lg:items-center flex-row gap-4">
       {!user ? (
         <>
           <Link to={"/auth/login"}>
